@@ -44,7 +44,7 @@ DeconstructPlayground();
 RangesPlaygroud();
 RawStringLiteralsPlayground("""My "parameter" is here""");
 
-await Consumer();
+//await Consumer();
 
 #region Declarations
 
@@ -180,6 +180,16 @@ var res = callback("A", 2);
 
 string Callback2(string result, int counter) => result + counter;
 var res2 = Callback2("A", 2);
+
+#endregion
+
+#region C# 12 Features
+
+var primary = new PrimaryConstruction(2, 2);
+var prSum = primary.Sum();
+
+WriteLine($"Primary construction: {prSum}");
+
 
 #endregion
 
