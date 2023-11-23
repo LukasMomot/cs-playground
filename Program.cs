@@ -2,6 +2,7 @@
 using CsPlayground;
 // Static imports
 using static System.Console;
+using static CsPlayground.Utils.ConsoleUtils;
 using System.Collections;
 using JSON = System.Collections.Generic.Dictionary<string, object>;
 WriteLine("Hello, World!");
@@ -204,7 +205,7 @@ List<int> list = [1, 2, 3, 4, 5];
 List<int> list2 = [6, 7, 8, 9, 10];
 
 List<int> listDesctr = [..list, ..list2];
-WriteLine($"List destruct: {listDesctr.Count}");
+WriteLineWithColor($"List destruct: {listDesctr.Count}", ConsoleColor.Magenta);
 
 #endregion
 
