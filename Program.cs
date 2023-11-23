@@ -2,7 +2,8 @@
 using CsPlayground;
 // Static imports
 using static System.Console;
-
+using System.Collections;
+using JSON = System.Collections.Generic.Dictionary<string, object>;
 WriteLine("Hello, World!");
 
 var dr = Manager.GetUberDriver(30);
@@ -187,9 +188,23 @@ var res2 = Callback2("A", 2);
 
 var primary = new PrimaryConstruction(2, 2);
 var prSum = primary.Sum();
-
 WriteLine($"Primary construction: {prSum}");
 
+// Alias types
+JSON json = new()
+{
+    ["name"] = "Suraj",
+    ["surname"] = "Prscho"
+};
+var count = json.Count;
+WriteLine($"Alias type Count: {count}");
+
+// Collection expressions
+List<int> list = [1, 2, 3, 4, 5];
+List<int> list2 = [6, 7, 8, 9, 10];
+
+List<int> listDesctr = [..list, ..list2];
+WriteLine($"List destruct: {listDesctr.Count}");
 
 #endregion
 
