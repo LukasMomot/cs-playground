@@ -3,6 +3,7 @@ public class Playground
     public int LocalFunction(int x)
     {
         var fn = (int x) => x * x;
+        static int fn2(int x) => x * x;
 
         static int add(int a, int b)
         {
