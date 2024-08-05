@@ -200,6 +200,8 @@ JSON json = new()
 var count = json.Count;
 WriteLine($"Alias type Count: {count}");
 
+var json2 = PlaygroundManager.CalculateJson(new JSON());
+
 // Collection expressions
 List<int> list = [1, 2, 3, 4, 5];
 List<int> list2 = [6, 7, 8, 9, 10];
@@ -209,4 +211,27 @@ WriteLineWithColor($"List destruct: {listDesctr.Count}", ConsoleColor.Magenta);
 
 #endregion
 
+var price1 = new Price(100, Currency.Dollar);
 
+var price2 = new Price2
+{
+    Currency = Currency.Dollar,
+    Value = 100
+};
+
+// Test if record can be null in a class
+var test = new Test
+{
+    Name = "Suraj",
+    Surname = "Prscho"
+};
+
+ReadLine();
+
+// =====
+file class Test
+{
+    public Price Price { get; set; }
+    public string Name { get; set; }
+    public string Surname { get; set; }
+}
